@@ -5,13 +5,13 @@ import { LinearGradient } from "expo-linear-gradient";
 
 export default function HomeScreen({ navigation }) {
 
-//   useEffect(() => {
-//     const timer = setTimeout(() => {
-//       navigation.replace("PlayerScreen");
-//     }, 4000);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigation.replace("PlayerScreen");
+    }, 4000);
 
-//     return () => clearTimeout(timer);
-//   }, []);
+    return () => clearTimeout(timer);
+  }, []);
 
   return ( 
     <LinearGradient
@@ -23,21 +23,23 @@ export default function HomeScreen({ navigation }) {
     
     <View style={styles.homeScreenBody}>
 
-        <View style={styles.homeLogo}>
-
-        
+        <View style={styles.homeLogo}>    
       <Image
         source={require('../assets/images/KingzPlayerLogo.png')}
-        // style={{ width: 150, height: 150, resizeMode: 'contain' }}
+        style={{ width: 300, height: 300, resizeMode: 'cover' }}
       />
-      <Text style={{color: 'white', fontSize: 50, marginTop: -150, fontFamily: 'Comic Sans MS'}}>
+      </View>
+
+      <View style={styles.homeLogoText}>
+      <Text style={{color: 'white', fontSize: 30,   fontFamily: 'sans-serif'}}>
         KingzPlay
+      </Text>
+      
+      <Text style={{ color: "white", marginTop: 10 }}>
+        Welcome to music world...
       </Text>
       </View>
 
-      <Text style={{ color: "white", marginTop: 20 }}>
-        Welcome to music world...
-      </Text>
     </View>
     
     </LinearGradient>

@@ -2,18 +2,23 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   homeScreenBody: {
-    flex: 1,
+    flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
-    margin: 'auto 0'
   },
   linearGradient: {
     flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  homeLogoText: {
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   homeLogo:{
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
+    marginBottom: -90
 
   }
 });
